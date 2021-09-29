@@ -8,8 +8,8 @@ public class LinkListDeleteNode {
         for(int i = 0;i<n;i++){
             ls.add(scanner.nextInt());
         }
-        ls.head = ls.delete(ls.head,scanner.nextInt());
-        ls.print(ls.head);
+        ls.head = ls.delete(scanner.nextInt());
+        ls.print();
         scanner.close();
     }
 
@@ -48,12 +48,12 @@ public class LinkListDeleteNode {
             this.tail = tem;
         }
 
-        public void print(Node head) {
+        public void print() {
             for (Node i = head; i != null; i = i.next)
                 System.out.print(i.data + " ");
         }
 
-        public void printReverse(Node tail) {
+        public void printReverse() {
             for (Node i = tail; i != null; i = i.previous)
                 System.out.print(i.data + " ");
         }
@@ -81,7 +81,7 @@ public class LinkListDeleteNode {
             tg.previous = t;
         }
 
-        public Node delete(Node head, int position) {
+        public Node delete(int position) {
 
             if(position == 0){
                head.next.previous = null;
@@ -98,7 +98,7 @@ public class LinkListDeleteNode {
             return head;
         }
 
-        public LinkList reverse(Node head) {
+        public LinkList reverse() {
             LinkList linkList = new LinkList();
             for (Node i = tail; i != null; i = i.previous) {
                 linkList.add(i.data);

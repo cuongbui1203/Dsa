@@ -12,7 +12,7 @@ public class LinkListMerge {
             for (int i = sc.nextInt(); i != 0; i--) ls1.add(sc.nextInt());
             for (int i = sc.nextInt(); i != 0; i--) ls2.add(sc.nextInt());
             res = ls1.merge(ls2);
-            res.print(res.head);
+            res.print();
             System.out.println();
         }
         sc.close();
@@ -60,12 +60,12 @@ public class LinkListMerge {
             this.size++;
         }
 
-        public void print(Node head) {
+        public void print() {
             for (Node i = head; i != null; i = i.next)
                 System.out.print(i.data + " ");
         }
 
-        public void printReverse(Node tail) {
+        public void printReverse() {
             for (Node i = tail; i != null; i = i.previous)
                 System.out.print(i.data + " ");
         }
@@ -82,7 +82,7 @@ public class LinkListMerge {
             this.size++;
         }
 
-        public void add(Node head, int data, int position) {
+        public void add(int data, int position) {
             Node t = head;
             for (int i = 0; i < position; i++) {
                 t = head.next;
@@ -95,7 +95,7 @@ public class LinkListMerge {
             this.size++;
         }
 
-        public void delete(Node head, int position) {
+        public void delete(int position) {
             Node i = head;
             for (int t = 1; t < position; t++) {
                 i = i.next;
@@ -106,7 +106,7 @@ public class LinkListMerge {
             this.size--;
         }
 
-        public LinkList reverse(Node head) {
+        public LinkList reverse() {
             LinkList linkList = new LinkList();
             for (Node i = tail; i != null; i = i.previous) {
                 linkList.add(i.data);

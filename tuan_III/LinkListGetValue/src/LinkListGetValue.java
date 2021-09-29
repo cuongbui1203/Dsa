@@ -12,7 +12,7 @@ public class LinkListGetValue {
             for (int i = 0; i < n; i++) {
                 ls.add(sc.nextInt());
             }
-            System.out.println(ls.getValueFT(ls.tail, sc.nextInt()));
+            System.out.println(ls.getValueFT(sc.nextInt()));
         }
         sc.close();
     }
@@ -59,12 +59,12 @@ public class LinkListGetValue {
             this.size++;
         }
 
-        public void print(Node head) {
+        public void print() {
             for (Node i = head; i != null; i = i.next)
                 System.out.print(i.data + " ");
         }
 
-        public void printReverse(Node tail) {
+        public void printReverse() {
             for (Node i = tail; i != null; i = i.previous)
                 System.out.print(i.data + " ");
         }
@@ -81,7 +81,7 @@ public class LinkListGetValue {
             this.size++;
         }
 
-        public void add(Node head, int data, int position) {
+        public void add(int data, int position) {
             Node t = head;
             for (int i = 0; i < position; i++) {
                 t = head.next;
@@ -94,7 +94,7 @@ public class LinkListGetValue {
             this.size++;
         }
 
-        public void delete(Node head, int position) {
+        public void delete(int position) {
             Node i = head;
             for (int t = 1; t < position; t++) {
                 i = i.next;
@@ -105,7 +105,7 @@ public class LinkListGetValue {
             this.size--;
         }
 
-        public LinkList reverse(Node head) {
+        public LinkList reverse() {
             LinkList linkList = new LinkList();
             for (Node i = tail; i != null; i = i.previous) {
                 linkList.add(i.data);
@@ -154,7 +154,7 @@ public class LinkListGetValue {
             }
             return res;
         }
-        public int getValueFT(Node tail,int positionFromTail){
+        public int getValueFT(int positionFromTail){
             if(positionFromTail == 0) return tail.data;
             else {
                 Node t = tail;

@@ -6,7 +6,7 @@ public class LinkListAddTail {
         Scanner sc = new Scanner(System.in);
         for(int n = sc.nextInt();n!=0;n--) ls.add(sc.nextInt());
         ls.add(sc.nextInt());
-        ls.print(ls.head);
+        ls.print();
         sc.close();
     }
 
@@ -39,7 +39,7 @@ public class LinkListAddTail {
             this.tail = tem;
         }
 
-        public void print(Node head) {
+        public void print() {
             for (Node i = head; i != null; i = i.next)
                 System.out.println(i.data);
         }

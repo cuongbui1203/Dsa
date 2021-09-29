@@ -57,12 +57,12 @@ public class LinkListCompare {
             this.size++;
         }
 
-        public void print(Node head) {
+        public void print() {
             for (Node i = head; i != null; i = i.next)
                 System.out.print(i.data + " ");
         }
 
-        public void printReverse(Node tail) {
+        public void printReverse() {
             for (Node i = tail; i != null; i = i.previous)
                 System.out.print(i.data + " ");
         }
@@ -92,7 +92,7 @@ public class LinkListCompare {
             this.size++;
         }
 
-        public void delete(Node head, int position) {
+        public void delete(int position) {
             Node i = head;
             for (int t = 1; t < position; t++) {
                 i = i.next;
@@ -103,7 +103,7 @@ public class LinkListCompare {
             this.size--;
         }
 
-        public LinkList reverse(Node head) {
+        public LinkList reverse() {
             LinkList linkList = new LinkList();
             for (Node i = tail; i != null; i = i.previous) {
                 linkList.add(i.data);

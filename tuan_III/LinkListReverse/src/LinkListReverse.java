@@ -7,16 +7,13 @@ public class LinkListReverse {
         ls.add(2);
         ls.add(3);
         ls.add(4);
-//        ls.addHead(30);
-//        ls.add(ls.head, 40, 2);
-//        ls.delete(ls.head, 2);
         System.out.println("truoc khi doi");
-        ls.print(ls.head);
+        ls.print();
         System.out.println("\nSau khi doi");
-        ls = ls.reverse(ls.head);
-        ls.print(ls.head);
+        ls = ls.reverse();
+        ls.print();
         System.out.println();
-        ls.printReverse(ls.tail);
+        ls.printReverse();
         System.out.println();
     }
 
@@ -59,12 +56,12 @@ public class LinkListReverse {
             this.tail = tem;
         }
 
-        public void print(Node head) {
+        public void print() {
             for (Node i = head; i != null; i = i.next)
                 System.out.print(i.data + " ");
         }
 
-        public void printReverse(Node tail) {
+        public void printReverse() {
             for (Node i = tail; i != null; i = i.previous)
                 System.out.print(i.data + " ");
         }
@@ -92,7 +89,7 @@ public class LinkListReverse {
             tg.previous = t;
         }
 
-        public void delete(Node head, int position) {
+        public void delete( int position) {
             Node i = head;
             for (int t = 1; t < position; t++) {
                 i = i.next;
@@ -102,7 +99,7 @@ public class LinkListReverse {
             tg.previous = i;
         }
 
-        public LinkList reverse(Node head) {
+        public LinkList reverse() {
             LinkList linkList = new LinkList();
             for (Node i = tail; i != null; i = i.previous) {
                 linkList.add(i.data);
